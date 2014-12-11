@@ -1,7 +1,8 @@
 EECE381_Group2-Module2
+==============
 
 Members: Xu Chen, Peter Wang, Yuxin Xu, Michael Zheng
-==============
+
 
 .c is the C code on NiosII system on DE2 device
 
