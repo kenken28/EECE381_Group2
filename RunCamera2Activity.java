@@ -186,9 +186,6 @@ public void sendString(Bitmap bitmap){
 	    	saveToInternalStorage(fileName,mypath,mydir, bmp);
 	    	
 	    	
-	    	//deleteFromInternalMemory(mydir, fileName,bmp);
-	    	//
-	    	//Log.d("CamTAG", Integer.toString(resized.getByteCount()));
 	    	
 	    	for (int i = 0; i < 240; i++) {
 	  	      for (int j = 0; j < 320; j++) {
@@ -448,12 +445,6 @@ public void sendString(Bitmap bitmap){
     } 
 
 
-  
-	   
-
-
-	    
-	
 	     
 	   private static String computeBits(int[] grayValues, int average) {
 		   char[] result = new char[grayValues.length];  
