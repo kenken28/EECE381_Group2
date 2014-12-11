@@ -70,12 +70,6 @@ public class PhoneActivity extends Activity {
 		imgNew = (ImageView) findViewById(R.id.PhotoforPhone);
 		
 		
-		
-		//updateConversationHandler = new Handler();
-		//this.serverThread = new Thread(new ServerThread());
-		//this.serverThread.start();
-		
-		
 		Button button1 = (Button) findViewById(R.id.refresh_button);		
 		button1.setOnClickListener(new OnClickListener(){
 			public void onClick(View view){
@@ -85,27 +79,6 @@ public class PhoneActivity extends Activity {
 				serverThread = new Thread(new ServerThread());
 				serverThread.start();
 				
-				//discoverPeers();
-				//requestForPeers();
-				//connectToPeers();
-				//new PhoneServer().execute();
-				//updateConversationHandler = new Handler();
-				//serverThread = new Thread(new ServerThread());
-				 //serverThread.start();
-				//connectToPeers();
-				//debug = myClient.doInBackground();
-				//Toast toast = Toast.makeText(getApplicationContext(), debug.toString(), Toast.LENGTH_SHORT);
-				//toast.show();
-				
-		    	/*String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
-		    	String fileName = "IMG_"+timeStamp+".jpeg";
-		    	cw = new ContextWrapper(getApplicationContext());
-		    	File mydir = cw.getDir("SecuCam",Context.MODE_PRIVATE);
-		    	File mypath = new File(mydir,fileName);
-		    	Bitmap bmp = BitmapFactory.decodeByteArray(data, 0, data.length);
-		    	imgNew.setImageBitmap(bmp);
-		    	saveToInternalStorage(bmp,mypath);
-		    	*/
 			}
 		});
 		Button button2 = (Button) findViewById(R.id.stop_button);
@@ -205,12 +178,7 @@ public class PhoneActivity extends Activity {
 		 
 		
 		            try {
-		
-		            	//this.is = this.clientSocket.getInputStream();
-		
-		                //this.input = new DataInputStream(is);
-		                
-		               //this.len = input.readInt();
+		            	
 		            	this.input = new BufferedReader(new InputStreamReader(this.clientSocket.getInputStream()));
 		                
 		
@@ -243,12 +211,6 @@ public class PhoneActivity extends Activity {
 		                	   finalString.append(line);
 		                   }
 		                   String read = finalString.toString();
-		                	//byte[] data = new byte[this.len];
-		                	//if(this.len>0){
-		                		//this.input.readFully(data);
-		                	//}
-		                    
-		
 		 
 		                    
 		                    updateConversationHandler.post(new updateUIThread(read));
