@@ -21,17 +21,7 @@ void initialize_audio();
 void initialWriteToFIFO();
 
 void initialize_audio_irq();
-//void audio_isr(void* context, alt_u32 id);
 void load_sound_data();
-
-/*
-void begin_isr_0(void* context, alt_u32 id);
-void victory_isr_0(void* context, alt_u32 id);
-void lose_isr_0(void* context, alt_u32 id);
-void background_isr_0(void* context, alt_u32 id);
-void bullet_isr_0(void* context, alt_u32 id);
-void hit_isr_0(void* context, alt_u32 id);
-*/
 
 void loadFromSDCard();
 void saveToSDCard();
