@@ -161,55 +161,11 @@ int main() {
 		//	printf("0x%x ", pic_rec[k]);
 		}
 
-		/*
-		for(y=0; y < SCREEN_HEIGHT ; y++) {
-				for(x=0; x < SCREEN_WIDTH ; x++){
-
-					alt_up_pixel_buffer_dma_draw(pixel_buffer, pic_rec[y*SCREEN_WIDTH+x], x,  y);
-					//usleep(100);
-					//printf("0x%x ", pic_rec[y*SCREEN_WIDTH+x]);
-				}
-			}
-		*/
 
 		drawPic();
 
-
 		saveToSDCard();
 
-/*
-		int xxx = atoi(message_rx);
-		switch (xxx) {
-		case 0:
-			*leds = 0x01;
-			break;
-		case 1:
-			*leds = 0x02;
-			break;
-		case 2:
-			*leds = 0x04;
-			break;
-		case 3:
-			*leds = 0x08;
-			break;
-		case 4:
-			*leds = 0x10;
-			break;
-		case 5:
-			*leds = 0x20;
-			break;
-		case 6:
-			*leds = 0x40;
-			break;
-		case 7:
-			*leds = 0x80;
-			break;
-		default:
-			break;
-		}*/
-
-	//	printf("\n");
-	//	printf("Message Echo Complete\n");
 	}
 	return 0;
 }
