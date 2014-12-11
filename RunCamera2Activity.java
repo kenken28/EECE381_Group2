@@ -234,20 +234,6 @@ public void sendString(Bitmap bitmap){
 		    	
 	    	}
 	    	
-	    	/*
-	    	if ( resized != null && resized2 != null ) {
-		    	comResultNum = photoComparison(resized, resized2);
-		        comResult.setText(comResultNum);
-		        
-		    	if ( comResultNum == "Alarm~!!!!") {
-		    		sendMessageCam();
-		    		countdown = 8;
-		    	} else {
-		    		if (countdown != 0){
-			    		countdown--;
-		    		}
-		    	}
-	    	}*/
 	    	
 	    	
 	    	imgNew.setImageBitmap(resized);
@@ -352,12 +338,6 @@ public void sendString(Bitmap bitmap){
     
     private String convertToString(Bitmap bitmap){
 		
-		/*int bytes = bitmap.getByteCount();
-		ByteBuffer buffer = ByteBuffer.allocate(bytes);
-		bitmap.copyPixelsToBuffer(buffer);
-		byte[] data = buffer.array();
-		return data;
-		*/
 	    ByteArrayOutputStream stream = new ByteArrayOutputStream();
 	    bitmap.compress(Bitmap.CompressFormat.PNG, 100, stream);
 	    byte[] byteArray = stream.toByteArray();
@@ -371,17 +351,6 @@ public void sendString(Bitmap bitmap){
 
 		MyApplication app = (MyApplication) getApplication();
 		
-		// Get the message from the box
-		//EditText et = (EditText) findViewById(R.id.MessageText);
-		//String msg = et.getText().toString();
-
-		// Create an array of bytes.  First byte will be the
-		// message length, and the next ones will be the message
-		
-		
-		//byte buf[] = new byte[msg.length() + 1];
-		//buf[0] = (byte) msg.length(); 
-		//System.arraycopy(msg.getBytes(), 0, buf, 1, msg.length());
 		
 		//first four bytes are length of data block 
 		int size = photoArray.length*2;
@@ -455,9 +424,6 @@ public void sendString(Bitmap bitmap){
 	      }
 	    }
 	    
-	    //double n = width1 * height1;
-	    //double p = diff / n / 125.0;
-	    //return (1-p)*100;
 	    
 	    double n = width1 * height1* 3;
 	    double p = diff2 / n;
