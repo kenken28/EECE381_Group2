@@ -1,7 +1,6 @@
-EECE381_Group2
+EECE381_Group2-Module2
 ==============
 
-Module2
 
 Members:
 
