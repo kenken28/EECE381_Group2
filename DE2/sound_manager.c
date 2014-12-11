@@ -235,37 +235,7 @@ void load_sound_data()
 	background_data = (unsigned int*) malloc(BACKGROUND_SIZE * sizeof(unsigned int));
 
 	printf("Check\n");
-/*
-	//begin
-	file_handle = alt_up_sd_card_fopen("begin.wav", false);
-	// skip header
-	for (loop_counter = 0; loop_counter < HEADER_SIZE; loop_counter++)
-	{
-		alt_up_sd_card_read(file_handle);
-	}
-	// read and store sound data into memory
-	for (loop_counter = 0; loop_counter < BEGIN_SIZE; loop_counter++)
-	{
-		begin_data[loop_counter] = alt_up_sd_card_read(file_handle);
-	}
-	alt_up_sd_card_fclose(file_handle);
-	printf("Check\n");
 
-	//victory
-	file_handle = alt_up_sd_card_fopen("victory.wav", false);
-	// skip header
-	for (loop_counter = 0; loop_counter < HEADER_SIZE; loop_counter++)
-	{
-		alt_up_sd_card_read(file_handle);
-	}
-	// read and store sound data into memory
-	for (loop_counter = 0; loop_counter < VICTORY_SIZE; loop_counter++)
-	{
-		victory_data[loop_counter] = alt_up_sd_card_read(file_handle);
-	}
-	alt_up_sd_card_fclose(file_handle);
-	printf("Check\n");
-*/
 	//background
 	file_handle = alt_up_sd_card_fopen("back.wav", false);
 	// skip header
@@ -280,52 +250,7 @@ void load_sound_data()
 	}
 	alt_up_sd_card_fclose(file_handle);
 	printf("Check\n");
-/*
-	//lose
-	file_handle = alt_up_sd_card_fopen("defeat.wav", false);
-	// skip header
-	for (loop_counter = 0; loop_counter < HEADER_SIZE; loop_counter++)
-	{
-		alt_up_sd_card_read(file_handle);
-	}
-	// read and store sound data into memory
-	for (loop_counter = 0; loop_counter < LOSE_SIZE; loop_counter++)
-	{
-		lose_data[loop_counter] = alt_up_sd_card_read(file_handle);
-	}
-	alt_up_sd_card_fclose(file_handle);
-	printf("Check\n");
 
-	//bullet
-	file_handle = alt_up_sd_card_fopen("bullet.wav", false);
-	// skip header
-	for (loop_counter = 0; loop_counter < HEADER_SIZE; loop_counter++)
-	{
-		alt_up_sd_card_read(file_handle);
-	}
-	// read and store sound data into memory
-	for (loop_counter = 0; loop_counter < BULLET_SIZE; loop_counter++)
-	{
-		lose_data[loop_counter] = alt_up_sd_card_read(file_handle);
-	}
-	alt_up_sd_card_fclose(file_handle);
-	printf("Check\n");
-
-	//hit
-	file_handle = alt_up_sd_card_fopen("hit.wav", false);
-	// skip header
-	for (loop_counter = 0; loop_counter < HEADER_SIZE; loop_counter++)
-	{
-		alt_up_sd_card_read(file_handle);
-	}
-	// read and store sound data into memory
-	for (loop_counter = 0; loop_counter < HIT_SIZE; loop_counter++)
-	{
-		lose_data[loop_counter] = alt_up_sd_card_read(file_handle);
-	}
-	alt_up_sd_card_fclose(file_handle);
-	printf("Check\n");
-*/
 	// create buffer for storing samples from sound_data
 	sound_buff = (unsigned int*) malloc(SAMPLE_SIZE * sizeof(unsigned int));
 }
